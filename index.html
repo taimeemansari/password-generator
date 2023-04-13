@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Password generator</title>
+  </head>
+  <body>
+    <div class="password-container">
+      <div class="password-header">
+        <h1>Password generator</h1>
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path
+              d="M336 352c97.2 0 176-78.8 176-176S433.2 0 336 0S160 78.8 160 176c0 18.7 2.9 36.8 8.3 53.7L7 391c-4.5 4.5-7 10.6-7 17v80c0 13.3 10.7 24 24 24h80c13.3 0 24-10.7 24-24V448h40c13.3 0 24-10.7 24-24V384h40c6.4 0 12.5-2.5 17-7l33.3-33.3c16.9 5.4 35 8.3 53.7 8.3zM376 96a40 40 0 1 1 0 80 40 40 0 1 1 0-80z"
+            />
+          </svg>
+        </span>
+      </div>
+      <div class="password-content">
+        <div class="password-text">
+          <input
+            type="text"
+            placeholder="Your password will be generated here"
+            id="passwordOut"
+            readonly
+          />
+          <span class="svg-copy" id="passwordCopy" title="copy password">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M272 0H396.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H272c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128H192v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"
+              />
+            </svg>
+          </span>
+          <div class="password-copy-text hide" id="passwordCopyText">
+            <p>Password copied successfully!</p>
+          </div>
+        </div>
+        <div class="password-options">
+          <h2>Select Options</h2>
+          <label for="passwordOut" class="passLabel">Password Length</label>
+          <div class="password-opt-range">
+            <input
+              type="range"
+              id="passwordRange"
+              min="0"
+              max="30"
+              step="1"
+              value="8"
+            />
+            <span class="pasword-opt-range-value" id="passwordRangeValue"
+              >8</span
+            >
+          </div>
+          <div class="checkbox-settings">
+            <div class="checkbox-ele">
+              <input type="checkbox" id="uppercaseOpt" value="uppercaseOpt" />
+              <label for="uppercaseOpt">Uppercase Characters</label>
+            </div>
+            <div class="checkbox-ele">
+              <input type="checkbox" id="lowercaseOpt" value="lowercaseOpt" />
+              <label for="lowercaseOpt">Lowercase Characters</label>
+            </div>
+            <div class="checkbox-ele">
+              <input
+                type="checkbox"
+                id="specialCharsOpt"
+                value="specialCharsOpt"
+              />
+              <label for="specialCharsOpt">Special Characters</label>
+            </div>
+            <div class="checkbox-ele">
+              <input type="checkbox" id="numbersOpt" value="numbersOpt" />
+              <label for="numbersOpt">Numbers</label>
+            </div>
+          </div>
+          <div class="error hide" id="error">
+            <p>Please select any one checkbox option</p>
+          </div>
+          <div class="error hide" id="passError">
+            <p>Password must be minimum 8 Characters Length</p>
+          </div>
+          <div class="button-wrapper">
+            <button class="generate-btn" id="generateBtn">Generate</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script/main.js"></script>
+  </body>
+</html>
