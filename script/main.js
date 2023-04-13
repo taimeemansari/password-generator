@@ -52,7 +52,7 @@ passwordCopy.addEventListener("click", function () {
   passwordCopyText.classList.remove("hide");
   setTimeout(() => {
     passwordCopyText.classList.add("hide");
-  }, 300);
+  }, 800);
 });
 
 // generate password function

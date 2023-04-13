@@ -24,7 +24,7 @@ body {
   max-width: 48rem;
   min-height: 40rem;
   background-color: #fff;
-  margin: 70px auto;
+  margin: 90px auto;
   border-radius: 16px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
@@ -94,10 +94,15 @@ body {
 
 .password-copy-text {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  bottom: 10%;
+  right: 50%;
+  transform: translateX(50%);
   font-size: 1rem;
-  color: green;
+  color: #4f504f;
+  background: #eee;
+  padding: 12px;
+  border-radius: 20px;
+  z-index: 9999;
 }
 
 .password-options h2 {
@@ -168,4 +173,10 @@ body {
 
 .hide {
   display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .password-container {
+    max-width: 34rem;
+  }
 }
